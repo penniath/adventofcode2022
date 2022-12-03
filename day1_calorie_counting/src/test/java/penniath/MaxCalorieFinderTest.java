@@ -42,4 +42,19 @@ class MaxCalorieFinderTest {
 
         assertEquals(11000, maxCalories);
     }
+
+    @Test
+    public void shouldReturnTheMaxCaloriesGivenTopElvesHaveRetrievedWhenCase1IsGiven() {
+        List<ElfCalories> calories = List.of(
+                new ElfCalories(List.of(1000, 2000, 3000)),
+                new ElfCalories(List.of(4000)),
+                new ElfCalories(List.of(5000, 6000)),
+                new ElfCalories(List.of(7000, 8000, 9000)),
+                new ElfCalories(List.of(10000))
+        );
+
+        Integer maxCalories = finder.find(calories, 3);
+
+        assertEquals(45000, maxCalories);
+    }
 }
