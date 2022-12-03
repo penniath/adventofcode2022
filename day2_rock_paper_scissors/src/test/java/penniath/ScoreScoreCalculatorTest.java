@@ -32,4 +32,17 @@ public class ScoreScoreCalculatorTest {
 
         assertEquals(15, result);
     }
+
+    @Test
+    public void shouldReturn12WhenExampleOfPartTwoCaseIsGiven() {
+        List<Game> games = Arrays.asList(
+                new Game(new Rock(), new Rock()),
+                new Game(new Paper(), new Rock()),
+                new Game(new Scissors(), new Rock())
+        );
+
+        int result = calculator.calculate(games);
+
+        assertEquals(12, result);
+    }
 }
