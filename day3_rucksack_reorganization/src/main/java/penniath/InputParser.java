@@ -4,17 +4,17 @@ import java.util.Arrays;
 import java.util.List;
 
 public class InputParser {
-    public List<Racksack> parse(String content) {
+    public List<Rucksack> parse(String content) {
         if (content == null) {
             return null;
         }
 
         return Arrays.stream(content.split("\\n"))
-                .map(InputParser::parseRacksack)
+                .map(InputParser::parseRucksack)
                 .toList();
     }
 
-    private static Racksack parseRacksack(String line) {
+    private static Rucksack parseRucksack(String line) {
         int length = line.length();
         int halfLine = length / 2;
         String firstCompartment = line.substring(0, halfLine);
@@ -22,6 +22,6 @@ public class InputParser {
         List<String> first = Arrays.asList(firstCompartment.split(""));
         List<String> second = Arrays.asList(secondCompartment.split(""));
 
-        return new Racksack(first, second);
+        return new Rucksack(first, second);
     }
 }
