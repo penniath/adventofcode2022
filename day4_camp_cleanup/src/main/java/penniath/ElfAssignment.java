@@ -23,6 +23,10 @@ public class ElfAssignment {
         return startingSection <= elfAssignment.getStartingSection() && endingSection >= elfAssignment.getEndingSection();
     }
 
+    public boolean overlaps(ElfAssignment elfAssignment) {
+        return startingSection <= elfAssignment.getEndingSection() && endingSection >= elfAssignment.getStartingSection();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

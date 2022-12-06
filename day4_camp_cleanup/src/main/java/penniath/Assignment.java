@@ -35,4 +35,8 @@ public class Assignment {
     public boolean areFullyContained() {
         return first.containsFully(second) || second.containsFully(first);
     }
+
+    public boolean areOverlapping() {
+        return first.overlaps(second) || second.overlaps(first);
+    }
 }
