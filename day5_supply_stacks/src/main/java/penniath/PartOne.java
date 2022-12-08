@@ -7,9 +7,9 @@ import penniath.model.StatusAndInstructions;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
-public class Main {
+public class PartOne {
     public static void main(String[] args) throws IOException {
-        ClassLoader classLoader = Main.class.getClassLoader();
+        ClassLoader classLoader = PartOne.class.getClassLoader();
         String content = new String(classLoader.getResourceAsStream("puzzle_input.txt").readAllBytes());
 
         InputParser parser = new InputParser();
